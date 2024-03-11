@@ -1,5 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <title>Tic Tac Toe</title>
 <meta charset="UTF-8" />
+<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 
 <style>
   body,
@@ -27,7 +31,14 @@
   }
 </style>
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+<body>
+
 <h1>Tic Tac Toe</h1>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 <table>
   <tr>
@@ -49,6 +60,7 @@
 
 <h2 hidden>Game over</h2>
 
+<script src="auth.js"></script>
 <script>
   // Initialization
   const boxes = Array.from(document.querySelectorAll("td"));
@@ -150,3 +162,6 @@
     return array;
   }
 </script>
+
+</body>
+</html>
